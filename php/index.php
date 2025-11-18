@@ -57,4 +57,24 @@
     if ($array_3["eta"] === 21) {} // Questa condizione è vera
     if ($array_3["eta"] === "21") {} // Questa condizione è falsa
    
+    /** Opratori logici
+     * AND --> and oppure &&
+     * OR  --> or oppure ||
+     * XOR --> xor
+     * NOT --> !
+     */
+
+    // Sintassi alternativa per PHP
+    if (true and false): // equivalente a if (true && false)
+        echo "condizione vera";
+    else:
+        echo "condizione falsa";
+    endif;
+
+    if (true or false): // equivalente a if (true || false)
+        echo "condizione vera";
+    else:
+        echo "condizione falsa";
+    endif;
+    
 ?>
