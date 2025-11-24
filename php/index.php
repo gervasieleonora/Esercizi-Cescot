@@ -77,4 +77,61 @@
         echo "condizione falsa";
     endif;
     
+    $voti = [6, 7, 7.5, 4, 9, 8 ];
+    $somma = 0;
+    $num_voti= 0;
+    /** invece che fare così per tutti i voti, uso un ciclo */
+
+    for ($i = 0; $i < count($voti); $i++) :
+        if ($voti[$i] > 0 and $voti[$i] <= 10) :
+        $somma = $somma + $voti[$i];
+        $num_voti++;
+        endif;
+    endfor;
+
+    echo "La somma dei voti è: " . $somma . "<br/>";
+    echo "Il numero dei voti è: " . count($voti) . "<br/>";
+    echo "Il numero dei voti validi è: " . $num_voti . "<br/>";
+
+    $media = $somma / $num_voti;
+    echo "La media dei voti è: " . $media . "<br/>";
+
+    $numero = 45;
+    $valori = [1, 3, 6, 87, 23, 5, 45, 17, 89, 12, 34];
+    while (!$trovato && $i < count($valori)) :
+        if ($valori[$i] == $numero) :
+            $trovato = true;
+            break; // interrompe il ciclo più vicino, anche in for 
+        endif;
+        $i++;
+    endwhile;
+
+    /** ciclo uguale con for 
+        * for ($i = 0; !$trovato && $i < count($valori); $i++) :
+        *     if ($valori[$i] == $numero) :
+        *         $trovato = true;
+        *     endif;
+        * endfor;
+     */
+
+    if ($trovato) :
+        echo $numero . "è presente nell'array";
+    else :
+        echo $numero . "non è presente nell'array";
+    endif;
+
+    /** Ciclo inverso: prima fa le istruzioni, poi verifica la condizione
+     * do {
+     * $istr
+     * } while (cond);
+     */
+
+    /**
+     * Operatori di incremento e decremento
+     * $i++; prendo il valore di i, poi lo incremento di 1
+     * ++$i; prima incremento di 1, poi prendo il valore di i
+     * 
+     * $i--;
+     * --$i;
+     */
 ?>
