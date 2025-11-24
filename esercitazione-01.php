@@ -88,7 +88,7 @@
      * 9 = ottimo
      * 10 = eccellente
      */
-    $voto = 11;
+    $voto = 6;
     ?>
     <div>
         <h2>Esercizio 04</h2>
@@ -107,6 +107,35 @@
             }
             else {
                 echo "Voto non valido</br>";
+            }
+            
+            /**
+             * Stessa cosa con switch
+             */
+            switch ($voto) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    echo "Giudizio (switch): Insufficiente</br>";
+                    break;
+                case 6:
+                    echo "Giudizio (switch): Sufficiente</br>";
+                    break;
+                case 7:
+                case 8:
+                    echo "Giudizio (switch): Buono</br>";
+                    break;
+                case 9:
+                    echo "Giudizio (switch): Ottimo</br>";
+                    break;
+                case 10:
+                    echo "Giudizio (switch): Eccellente</br>";
+                    break;
+                default:
+                    echo "Voto non valido (switch)</br>"; // per valori non previsti
             }
             ?>
         </p>

@@ -80,4 +80,50 @@ echo "L'età media delle persone è: " . $media . "</br>";
  * $anni += $persona["età"];
  * endforeach;
  */
+
+/**
+ * Esercizio 4
+ * Data l'età di una persona,ritorna vero o falso se può guidare il 125cc (età minima 16 anni)
+ */
+ function può_guidare_125cc($età) {
+    if ($età >= 16) {
+        return true;
+    } else {
+        return false; // oppure return false senza else
+    }
+ }
+    $età = 15;
+    if (può_guidare_125cc($età)) {
+        echo "Può guidare il 125cc</br>";
+    } else {
+        echo "Non può guidare il 125cc</br>";
+    }
+    $età = 18;
+    if (può_guidare_125cc($età)) {
+        echo "Può guidare il 125cc</br>";
+    } else {
+        echo "Non può guidare il 125cc</br>";
+    }
+
+/**
+ * Esercizio 5
+ * Dato un numero, verifica se è divisibile per 3
+ */
+function n_divisibile_per_3($n) {
+     if ($n % 3 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+} // oppure solo return $n % 3 == 0;
+   
+
+/**
+ * Esercizio 6
+ * Dato un numero, ritornalo in formato euro (€ 10,00)
+ */
+function formatta_in_euro($importo) {
+    return "€ " . number_format($importo, 2, ",", ".");
+}
+echo formatta_in_euro(1936.2) . "</br>";
 ?>
